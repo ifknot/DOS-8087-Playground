@@ -19,4 +19,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test_npx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="math\is_installed_npx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="math\constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

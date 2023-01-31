@@ -141,6 +141,11 @@
   <ItemGroup>
     <ClCompile Include="..\main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="math\constants.h" />
+    <ClInclude Include="math\is_installed_npx.h" />
+    <ClInclude Include="test_npx.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

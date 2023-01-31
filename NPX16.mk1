@@ -1,0 +1,14 @@
+!define BLANK ""
+C:\DOS\NPX\main.obj : C:\DOS\NPX\main.cpp .AUTODEPEND
+ @C:
+ cd C:\DOS\NPX
+ *wpp main.cpp -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj -ml -x&
+s -xr
+
+C:\DOS\NPX\NPX16.exe : C:\DOS\NPX\main.obj .AUTODEPEND
+ @C:
+ cd C:\DOS\NPX
+ @%write NPX16.lk1 FIL main.obj
+ @%append NPX16.lk1 
+ *wlink name NPX16 d all sys dos op m op maxe=25 op q op symf @NPX16.lk1
+
