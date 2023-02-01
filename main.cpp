@@ -4,7 +4,7 @@
 
 int main() {
 
-  std::cout << "NPX Playground!\n"; 
+  INFO("NPX Playground!\n"); 
 
   return test::run();
 

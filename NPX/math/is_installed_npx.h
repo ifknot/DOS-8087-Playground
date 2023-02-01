@@ -1,13 +1,13 @@
-#ifndef IS_INSTALLED_NPX_H
-#define IS_INSTALLED_NPX_H
+#ifndef MATH_IS_INSTALLED_NPX_H
+#define MATH_IS_INSTALLED_NPX_H
 
 #include "constants.h"
 
 namespace math {
 
 	/**
-	The documented way to detect an x87 FPU is to attempt to initialise it, 
-	and then read its control word.
+	The documented way to detect an x87 FPU (or, as per Intel, Numeric Processor eXtension - NPX)
+  is to attempt to initialise it, and then read its control word.
 	If the status word is *not* 0 after this, no NPX is installed.
 	The NPX socket is supposed to be wired in such a way that at least one of 
 	the lower eight bits of the status word floats high when no NPX is installed.
@@ -21,8 +21,8 @@ namespace math {
 			.8086
 			.8087
 
-			fninit					
-			fnstsw	fpu_status
+			fninit						; non-waiting variant of finit		
+			fnstsw	fpu_status			; ditto fstsw 
 
 		}
 		return fpu_status == 0;

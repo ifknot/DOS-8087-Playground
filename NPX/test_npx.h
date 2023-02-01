@@ -1,23 +1,23 @@
 #ifndef TEST_NPX_H
 #define TEST_NPX_H
 
-#include <iostream>
-#include <cassert>
+//#define NDEBUG
+
+#include "test/macros.h"
 
 #include "math/is_installed_npx.h"
-
-#define EXIT_SUCCESS 0
 
 namespace test {
 
 	int run() {
 
 		int exit = EXIT_SUCCESS;
-		std::cout << "test all...\n";
+		INFO("test all...\n");
 		{
-			std::cout << "test is_installed_npx\n";
-			assert(math::is_installed_npx());
+			INFO("test is_installed_npx\n");
+			ASSERT(math::is_installed_npx(), "NPX not installed");
 		}
+		LOG(exit);
 		return exit;
 
 	}
