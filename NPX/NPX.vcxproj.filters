@@ -32,5 +32,8 @@
     <ClInclude Include="test\macros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="math\npx_array_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -9,7 +9,7 @@
 #ifdef NDEBUG
 #define LOG(var)
 #else
-#define LOG(var) do{std::cout << #var << '=' << var;} while(false)
+#define LOG(var) do{std::cout << #var << '=' << var << std::endl;} while(false)
 #endif
 
 #ifdef NDEBUG
